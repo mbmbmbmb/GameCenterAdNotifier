@@ -19,6 +19,7 @@ namespace GameCenterAdNotifier
     internal sealed class AdNotifierEngine
     {
         private readonly int m_pollPeriodMilliseconds;
+
         private IEnumerable<IAdModule> m_modules;
 
         private Screen m_screenPlayingAd;
