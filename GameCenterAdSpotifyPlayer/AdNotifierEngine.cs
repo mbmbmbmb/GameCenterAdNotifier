@@ -117,28 +117,31 @@ namespace GameCenterAdNotifier
 
                         using (var currentScreen = CaptureScreen(screen))
                         {
-                            var difference = currentScreen.PercentageDifference(inProgressImage);
+                            using (var currentScreenResized = currentScreen.Resize(1920, 1080))
+                            {
+                                var difference = currentScreenResized.PercentageDifference(inProgressImage);
 
-                            if (difference < 0.70)
-                            {
-                                if (!IsAdPlaying())
+                                if (difference < 0.70)
                                 {
-                                    Utilities.WriteLineWithTime(
-                                        $"Commercial break started on display '{screen.DeviceName}' -- attempting to play!");
-                                    m_screenPlayingAd = screen;
-                                    NotifyModules(true, screen);
-                                    break;
+                                    if (!IsAdPlaying())
+                                    {
+                                        Utilities.WriteLineWithTime(
+                                            $"Commercial break started on display '{screen.DeviceName}' -- attempting to play!");
+                                        m_screenPlayingAd = screen;
+                                        NotifyModules(true, screen);
+                                        break;
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                if (IsAdPlaying())
+                                else
                                 {
-                                    Utilities.WriteLineWithTime(
-                                        $"Commercial break ended on display '{screen.DeviceName}' --  attempting to pause!");
-                                    m_screenPlayingAd = null;
-                                    NotifyModules(false, screen);
-                                    break;
+                                    if (IsAdPlaying())
+                                    {
+                                        Utilities.WriteLineWithTime(
+                                            $"Commercial break ended on display '{screen.DeviceName}' --  attempting to pause!");
+                                        m_screenPlayingAd = null;
+                                        NotifyModules(false, screen);
+                                        break;
+                                    }
                                 }
                             }
                         }
