@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCenterAdNotifier", "GameCenterAdSpotifyPlayer\GameCenterAdNotifier.csproj", "{915A4161-2B44-4D24-9871-8C0342D8C360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCenterAdNotifier.Common", "GameCenterAdNotifier.Common\GameCenterAdNotifier.Common.csproj", "{E367DB08-1F6A-471A-B7E0-5C8A37ADFE8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FD19AFF7-45CF-4D39-9812-875E793D1A74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spotify", "Spotify", "{914FA21B-195E-4ABC-B996-D8A7B4F5B800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCenterAdNotifier.Spotify", "Modules\GameCenterAdNotifier.Spotify\GameCenterAdNotifier.Spotify.csproj", "{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915A4161-2B44-4D24-9871-8C0342D8C360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915A4161-2B44-4D24-9871-8C0342D8C360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915A4161-2B44-4D24-9871-8C0342D8C360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915A4161-2B44-4D24-9871-8C0342D8C360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E367DB08-1F6A-471A-B7E0-5C8A37ADFE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E367DB08-1F6A-471A-B7E0-5C8A37ADFE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E367DB08-1F6A-471A-B7E0-5C8A37ADFE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E367DB08-1F6A-471A-B7E0-5C8A37ADFE8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{914FA21B-195E-4ABC-B996-D8A7B4F5B800} = {FD19AFF7-45CF-4D39-9812-875E793D1A74}
+		{2E0BD0AD-FFCC-4BB5-93AF-2D5238569AC5} = {914FA21B-195E-4ABC-B996-D8A7B4F5B800}
+	EndGlobalSection
+EndGlobal
